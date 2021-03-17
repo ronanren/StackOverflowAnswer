@@ -14,7 +14,8 @@
         "https://www.google.*/*"
       ],
       "js": [
-        "jquery-3.6.0.min.js",
+        "js/jquery-3.6.0.min.js",
+        "js/run_prettify.js",
         "content.js"
       ],
       "css": [

@@ -11,6 +11,12 @@ var sidebarAnswer = document.createElement('div');
 sidebarAnswer.setAttribute('class', 'StackOverflowAnswer-sidebarAnswer');
 sidebar.appendChild(sidebarTitle);
 sidebar.appendChild(sidebarAnswer);
+var a = document.createElement('a');
+a.setAttribute('class', 'StackOverflowAnswer-sidebarTitleMain')
+sidebarTitle.appendChild(a);
+var a = document.createElement('a');
+a.setAttribute('class', 'StackOverflowAnswer-sidebarTitleUrl')
+sidebarTitle.appendChild(a);
 
 // Parse Google Search to insert button on StackOverflow topics
 $('h3, .fl').toArray().forEach((element, i) => {
@@ -57,6 +63,15 @@ $.ajax({
          button[0].innerHTML += ' (' + answers[answer].score + ')';
          button[0].addEventListener("click", function(event) {
             console.log(answers[event.target.getAttribute('id')]);
+            $('.StackOverflowAnswer-sidebarTitleMain').text(answers[event.target.getAttribute('id')].title).html();
+            $('.StackOverflowAnswer-sidebarTitleMain').attr('href', event.target.getAttribute('url'));
+            $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url')).html();
+            $('.StackOverflowAnswer-sidebarTitleUrl').attr('href', event.target.getAttribute('url'));
+            $('.StackOverflowAnswer-sidebarAnswer').html(answers[event.target.getAttribute('id')].body);
+            $('pre').attr('class', 'prettyprint');
+            $('code').attr('class', 'prettyprint');
+            PR.prettyPrint();
+            
          });
       } 
    }
