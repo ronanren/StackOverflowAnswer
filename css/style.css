@@ -1,0 +1,10 @@
+.StackOverflowAnswer-sidebar {
+    position: absolute; 
+    top: 0px; 
+    padding: 30px 2px 0px; 
+    margin: 12px 10px 0px 890px;
+    min-width: 253px; 
+    max-width: 465px; 
+    overflow: hidden; 
+    background: #282828;
+}

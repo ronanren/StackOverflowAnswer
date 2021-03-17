@@ -1,5 +1,18 @@
 let listId = [];
 
+// Create sidebar
+var columnResult = document.getElementById('center_col');
+var sidebar = document.createElement('div');
+sidebar.setAttribute('class', 'StackOverflowAnswer-sidebar');
+columnResult.parentNode.insertBefore(sidebar, columnResult.nextSibling);
+var sidebarTitle = document.createElement('div');
+sidebarTitle.setAttribute('class', 'StackOverflowAnswer-sidebarTitle');
+var sidebarAnswer = document.createElement('div');
+sidebarAnswer.setAttribute('class', 'StackOverflowAnswer-sidebarAnswer');
+sidebar.appendChild(sidebarTitle);
+sidebar.appendChild(sidebarAnswer);
+
+// Parse Google Search to insert button on StackOverflow topics
 $('h3, .fl').toArray().forEach((element, i) => {
    try{
       let url = new URL(element.closest("a").href);
@@ -19,8 +32,9 @@ $('h3, .fl').toArray().forEach((element, i) => {
    } catch (error) {}
 });
 
+// Request Ajax to obtain the best answer of each StackOverflow topics
 $.ajax({
-   url: 'https://api.stackexchange.com/2.2/questions/' + listId.join(';') + '/answers?pagesize=100&order=desc&sort=votes&site=stackoverflow&filter=!b6Aub*uCt1FjWD',
+   url: 'https://api.stackexchange.com/2.2/questions/' + listId.join(';') + '/answers?pagesize=100&order=desc&sort=votes&site=stackoverflow&filter=!b6Aub*uCt1FjWD&key=9hS39Y0q)hDJL2rDsWfA*g((',
    type: 'GET',
    success: function(data){
       var answers = {};
