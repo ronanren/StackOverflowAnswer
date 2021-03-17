@@ -1,0 +1,32 @@
+{
+  "name": "Stackoverflow Sidebar",
+  "description": "Stackoverflow Sidebar on google search",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "include_globs": [
+        "http://www.google.*/*",
+        "https://www.google.*/*"
+      ],
+      "js": [
+        "jquery-3.6.0.min.js",
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "icons": {
+    "16": "/images/get_started16.png",
+    "32": "/images/get_started32.png",
+    "48": "/images/get_started48.png",
+    "128": "/images/get_started128.png"
+  }
+}
