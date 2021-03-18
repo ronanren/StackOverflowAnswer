@@ -6,46 +6,14 @@
     min-width: 253px; 
     max-width: 465px; 
     overflow: hidden; 
-    background: #282828;
-    border: 1px solid #282828;
-    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #dfe1e5;
+    border-radius: 8px;
 }
 
 .StackOverflowAnswer-sidebarAnswer {
-    color: #eeeeee;
-    padding: 10px;
-}
-
-pre.prettyprint { display: block; background-color: #333 }
-pre .nocode { background-color: none; color: #000 }
-pre .str { color: #ffa0a0 }
-pre .kwd { color: #f0e68c; font-weight: bold }
-pre .com { color: #87ceeb } 
-pre .typ { color: #98fb98 } 
-pre .lit { color: #cd5c5c } 
-pre .pun { color: #fff }   
-pre .pln { color: #fff }
-pre .tag { color: #f0e68c; font-weight: bold } 
-pre .atn { color: #bdb76b; font-weight: bold } 
-pre .atv { color: #ffa0a0 } 
-pre .dec { color: #98fb98 } 
-
-
-ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } 
-li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
-
-@media print {
-  pre.prettyprint { background-color: none }
-  pre .str, code .str { color: #060 }
-  pre .kwd, code .kwd { color: #006; font-weight: bold }
-  pre .com, code .com { color: #600; font-style: italic }
-  pre .typ, code .typ { color: #404; font-weight: bold }
-  pre .lit, code .lit { color: #044 }
-  pre .pun, code .pun { color: #440 }
-  pre .pln, code .pln { color: #000 }
-  pre .tag, code .tag { color: #006; font-weight: bold }
-  pre .atn, code .atn { color: #404 }
-  pre .atv, code .atv { color: #060 }
+    color: #4d5156;
+    padding: 10px 20px;
 }
 
 .StackOverflowAnswer-sidebarTitle {
@@ -62,7 +30,7 @@ li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
     line-height: 1em;
     font-weight: 600;
     margin-bottom: 4px;
-    color: #eeeeee !important;
+    color: #4d5156 !important;
 }
 
 .StackOverflowAnswer-sidebarTitleMain:hover {
@@ -70,9 +38,121 @@ li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
 }
 
 .StackOverflowAnswer-sidebarTitleUrl {
-    color: #eeeeee !important;
+    color: #4d5156 !important;
 }
 
 .StackOverflowAnswer-sidebarTitleUrl:hover {
     text-decoration: underline;
+}
+
+.StackOverflowAnswer-sidebarTitleUrl::before { 
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/768px-Stack_Overflow_icon.svg.png');
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0px 4px 0px -4px;
+    vertical-align: middle;
+    content:"";
+}
+
+/* prettify */
+.prettyprint {
+  background: #2f3640;
+  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+  border: 0 !important;
+  border-radius: 4px;
+  padding: 1.5px !important;
+}
+
+pre.prettyprint {
+    padding: 4px !important;
+}
+
+pre.prettyprint > code {
+    padding: 0px !important;
+}
+
+.pln {
+  color: #e6e9ed !important;
+}
+
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #656d78 !important;
+}
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  padding-left: 1em;
+  background-color: #2f3640;
+  list-style-type: decimal;
+}
+
+@media screen {
+  /* string content */
+  .str {
+    color: #ffce54 !important;
+  }
+  /* keyword */
+  .kwd {
+    color: #4fc1e9 !important;
+  }
+  /* comment */
+  .com {
+    color: #656d78 !important;
+  }
+  /* type name */
+  .typ {
+    color: #4fc1e9 !important;
+  }
+  /* literal value */
+  .lit {
+    color: #ac92ec !important;
+  }
+  /* punctuation */
+  .pun {
+    color: #e6e9ed !important;
+  }
+  /* lisp open bracket */
+  .opn {
+    color: #e6e9ed !important;
+  }
+  /* lisp close bracket */
+  .clo {
+    color: #e6e9ed !important;
+  }
+  /* markup tag name */
+  .tag {
+    color: #ed5565 !important;
+  }
+  /* markup attribute name */
+  .atn {
+    color: #a0d468 !important;
+  }
+  /* markup attribute value */
+  .atv {
+    color: #ffce54 !important;
+  }
+  /* declaration */
+  .dec {
+    color: #ac92ec !important;
+  }
+  /* variable name */
+  .var {
+    color: #e6e9ed !important;
+  }
+  /* function name */
+  .fun {
+    color: #e6e9ed !important;
+  }
 }

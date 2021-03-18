@@ -23,10 +23,7 @@
       ]
     }
   ],
-  "permissions": [
-    "activeTab",
-    "tabs"
-  ],
+  "permissions": [],
   "icons": {
     "512": "/images/logo512.png"
   }

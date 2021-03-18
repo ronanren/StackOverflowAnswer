@@ -65,13 +65,12 @@ $.ajax({
             console.log(answers[event.target.getAttribute('id')]);
             $('.StackOverflowAnswer-sidebarTitleMain').text(answers[event.target.getAttribute('id')].title).html();
             $('.StackOverflowAnswer-sidebarTitleMain').attr('href', event.target.getAttribute('url'));
-            $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url')).html();
-            $('.StackOverflowAnswer-sidebarTitleUrl').attr('href', event.target.getAttribute('url'));
-            $('.StackOverflowAnswer-sidebarAnswer').html(answers[event.target.getAttribute('id')].body);
+            $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id).html();
+            $('.StackOverflowAnswer-sidebarTitleUrl').attr('href', event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id);
+            $('.StackOverflowAnswer-sidebarAnswer').html(answers[event.target.getAttribute('id')].body + '<p>--' + answers[event.target.getAttribute('id')].owner.display_name + '</p>');
             $('pre').attr('class', 'prettyprint');
             $('code').attr('class', 'prettyprint');
             PR.prettyPrint();
-            
          });
       } 
    }
