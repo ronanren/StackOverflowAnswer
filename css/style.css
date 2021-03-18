@@ -9,6 +9,7 @@
     background: #ffffff;
     border: 1px solid #dfe1e5;
     border-radius: 8px;
+    display: none;
 }
 
 .StackOverflowAnswer-sidebarAnswer {
@@ -111,7 +112,7 @@ li.L9 {
   }
   /* keyword */
   .kwd {
-    color: #4fc1e9 !important;
+    color: #cc99cc !important;
   }
   /* comment */
   .com {
