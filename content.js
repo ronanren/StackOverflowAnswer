@@ -63,7 +63,7 @@ $.ajax({
          button[0].innerHTML += ' (' + answers[answer].score + ')';
          button[0].addEventListener("click", function(event) {
             console.log(answers[event.target.getAttribute('id')]);
-            $('.StackOverflowAnswer-sidebarTitleMain').text(answers[event.target.getAttribute('id')].title).html();
+            $('.StackOverflowAnswer-sidebarTitleMain').html(answers[event.target.getAttribute('id')].title).text();
             $('.StackOverflowAnswer-sidebarTitleMain').attr('href', event.target.getAttribute('url'));
             $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id).html();
             $('.StackOverflowAnswer-sidebarTitleUrl').attr('href', event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id);

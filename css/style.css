@@ -16,6 +16,10 @@
     padding: 10px 20px;
 }
 
+.StackOverflowAnswer-sidebarAnswer > ul {
+    margin-left: 18px;
+}
+
 .StackOverflowAnswer-sidebarTitle {
     display: flex;
     flex-direction: column;
@@ -58,11 +62,13 @@
 
 /* prettify */
 .prettyprint {
-  background: #2f3640;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
-  border: 0 !important;
-  border-radius: 4px;
-  padding: 1.5px !important;
+    background: #2f3640;
+    font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+    border: 0 !important;
+    border-radius: 4px;
+    padding: 1.5px !important;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 
 pre.prettyprint {
