@@ -65,15 +65,22 @@ if (listId.length){
                button[0].innerHTML += ' (' + answers[answer].score + ')';
                button[0].addEventListener("click", function(event) {
                   console.log(answers[event.target.getAttribute('id')]);
-                  $('.StackOverflowAnswer-sidebar').css('display', 'block');
-                  $('.StackOverflowAnswer-sidebarTitleMain').html(answers[event.target.getAttribute('id')].title).text();
-                  $('.StackOverflowAnswer-sidebarTitleMain').attr('href', event.target.getAttribute('url'));
-                  $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id).html();
-                  $('.StackOverflowAnswer-sidebarTitleUrl').attr('href', event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id);
-                  $('.StackOverflowAnswer-sidebarAnswer').html(answers[event.target.getAttribute('id')].body + '<p>--' + answers[event.target.getAttribute('id')].owner.display_name + '</p>');
-                  $('pre').attr('class', 'prettyprint');
-                  $('code').attr('class', 'prettyprint');
-                  PR.prettyPrint();
+                  if ($('.StackOverflowAnswer-sidebarTitleMain').attr('href') != event.target.getAttribute('url')){
+                     $('.StackOverflowAnswer-sidebar').css('display', 'block');
+                     $('.StackOverflowAnswer-sidebarTitleMain').html(answers[event.target.getAttribute('id')].title).text();
+                     $('.StackOverflowAnswer-sidebarTitleMain').attr('href', event.target.getAttribute('url'));
+                     $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id).html();
+                     $('.StackOverflowAnswer-sidebarTitleUrl').attr('href', event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id);
+                     $('.StackOverflowAnswer-sidebarAnswer').html(answers[event.target.getAttribute('id')].body + '<p>--' + answers[event.target.getAttribute('id')].owner.display_name + '</p>');
+                     $('pre').attr('class', 'prettyprint');
+                     $('code').attr('class', 'prettyprint');
+                     PR.prettyPrint();
+                     $('.StackOverflowAnswer-sidebar')
+                     $('.StackOverflowAnswer-sidebar').removeClass("animation");
+                     window.requestAnimationFrame(function(time) {
+                           $('.StackOverflowAnswer-sidebar').addClass("animation");
+                        });
+                  }
             });
             } else {
                button[0].innerHTML = 'No Answer';
