@@ -2,9 +2,9 @@
     position: absolute; 
     top: 0px; 
     padding: 0px; 
-    margin: 12px 10px 0px 890px;
+    margin: 12px 10px 0px 870px;
     min-width: 253px; 
-    max-width: 465px; 
+    max-width: 500px; 
     overflow: hidden; 
     background: #ffffff;
     border: 1px solid #dfe1e5;
@@ -34,7 +34,7 @@
     overflow: hidden;
     line-height: 1em;
     font-weight: 600;
-    margin-bottom: 4px;
+    padding-bottom: 6px;
     color: #4d5156 !important;
 }
 
@@ -60,6 +60,26 @@
     vertical-align: middle;
     content:"";
 }
+
+[class^="buttonAnswer"] {
+    background-color: #1a73e8;
+    color: #ffffff;
+    padding: 2px 4px;
+    margin-left: 4px;
+    border: none;
+    border-radius: 4px;
+    font: 500 14px Roboto, sans-serif;
+    cursor: pointer;
+}
+
+[class^="buttonAnswer"]:focus {
+    outline:0;
+}
+
+[class^="buttonAnswer"]:hover {
+    background-color: #2b7de9;
+}
+
 
 /* prettify */
 .prettyprint {

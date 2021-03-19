@@ -32,7 +32,6 @@ $('h3, .fl').toArray().forEach((element, i) => {
          button.setAttribute('class', "buttonAnswer" + url.pathname.split('/')[2]);
          element.closest("div").appendChild(button);
       }
-
       if (i == 0 && url.host == 'stackoverflow.com'){
          showOnLoad = true;
       }
@@ -78,6 +77,7 @@ if (listId.length){
             });
             } else {
                button[0].innerHTML = 'No Answer';
+               button[0].style.backgroundColor = '#7f8c8d';
                button[0].disabled = true;
             }
          } 
@@ -89,6 +89,3 @@ if (listId.length){
       }
    });
 }
-
-
-

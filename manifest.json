@@ -1,6 +1,6 @@
 {
-  "name": "Stackoverflow Sidebar",
-  "description": "Stackoverflow Sidebar on google search",
+  "name": "Stackoverflow Answer",
+  "description": "Stackoverflow answer sidebar on google search",
   "version": "1.0",
   "manifest_version": 3,
   "content_scripts": [
