@@ -60,33 +60,35 @@ if (listId.length){
             answers[id] = bestAnswer;
          });
          for (var answer in answers){
-            var button = document.getElementsByClassName('buttonAnswer' + answer);
-            if (answers[answer]){
-               button[0].innerHTML += ' (' + answers[answer].score + ')';
-               button[0].addEventListener("click", function(event) {
-                  console.log(answers[event.target.getAttribute('id')]);
-                  if ($('.StackOverflowAnswer-sidebarTitleMain').attr('href') != event.target.getAttribute('url')){
-                     $('.StackOverflowAnswer-sidebar').css('display', 'block');
-                     $('.StackOverflowAnswer-sidebarTitleMain').html(answers[event.target.getAttribute('id')].title).text();
-                     $('.StackOverflowAnswer-sidebarTitleMain').attr('href', event.target.getAttribute('url'));
-                     $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id).html();
-                     $('.StackOverflowAnswer-sidebarTitleUrl').attr('href', event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id);
-                     $('.StackOverflowAnswer-sidebarAnswer').html(answers[event.target.getAttribute('id')].body + '<p>--' + answers[event.target.getAttribute('id')].owner.display_name + '</p>');
-                     $('pre').attr('class', 'prettyprint');
-                     $('code').attr('class', 'prettyprint');
-                     PR.prettyPrint();
-                     $('.StackOverflowAnswer-sidebar')
-                     $('.StackOverflowAnswer-sidebar').removeClass("animation");
-                     window.requestAnimationFrame(function(time) {
-                           $('.StackOverflowAnswer-sidebar').addClass("animation");
-                        });
-                     $('.StackOverflowAnswer-sidebarAnswer').scrollTop(0);
-                  }
-            });
-            } else {
-               button[0].innerHTML = 'No Answer';
-               button[0].style.backgroundColor = '#7f8c8d';
-               button[0].disabled = true;
+            var buttons = document.getElementsByClassName('buttonAnswer' + answer); 
+            for(var i = 0; i < buttons.length; i++) {
+               if (answers[answer]){
+                  buttons[i].innerHTML += ' (' + answers[answer].score + ')';
+                  buttons[i].addEventListener("click", function(event) {
+                     // console.log(answers[event.target.getAttribute('id')]);
+                     if ($('.StackOverflowAnswer-sidebarTitleMain').attr('href') != event.target.getAttribute('url')){
+                        $('.StackOverflowAnswer-sidebar').css('display', 'block');
+                        $('.StackOverflowAnswer-sidebarTitleMain').html(answers[event.target.getAttribute('id')].title).text();
+                        $('.StackOverflowAnswer-sidebarTitleMain').attr('href', event.target.getAttribute('url'));
+                        $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id).html();
+                        $('.StackOverflowAnswer-sidebarTitleUrl').attr('href', event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id);
+                        $('.StackOverflowAnswer-sidebarAnswer').html(answers[event.target.getAttribute('id')].body + '<p>--' + answers[event.target.getAttribute('id')].owner.display_name + '</p>');
+                        $('pre').attr('class', 'prettyprint');
+                        $('code').attr('class', 'prettyprint');
+                        PR.prettyPrint();
+                        $('.StackOverflowAnswer-sidebar')
+                        $('.StackOverflowAnswer-sidebar').removeClass("animation");
+                        window.requestAnimationFrame(function(time) {
+                              $('.StackOverflowAnswer-sidebar').addClass("animation");
+                           });
+                        $('.StackOverflowAnswer-sidebarAnswer').scrollTop(0);
+                     }
+                  });
+               } else {
+                  button[i].innerHTML = 'No Answer';
+                  button[i].style.backgroundColor = '#7f8c8d';
+                  button[i].disabled = true;
+               }
             }
          } 
          // Detect to show/unshow automatically after load
