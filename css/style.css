@@ -14,14 +14,19 @@
 }
 
 .animation {
-    animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation:fade-in 0.6s cubic-bezier(.39,.575,.565,1.000) both;
 }
 
-@keyframes scale-in-center{0%{transform:scale(0);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes fade-in{
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
 
 .StackOverflowAnswer-sidebarAnswer {
     color: #4d5156;
     padding: 10px 20px;
+    overflow-y: auto;
+    max-height: calc(60vh);
 }
 
 .StackOverflowAnswer-sidebarAnswer > ul {
@@ -37,7 +42,6 @@
 
 .StackOverflowAnswer-sidebarTitleMain {
     font-size: 1.67em;
-    max-height: 2em;
     overflow: hidden;
     line-height: 1em;
     font-weight: 600;

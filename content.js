@@ -32,7 +32,7 @@ $('h3, .fl').toArray().forEach((element, i) => {
          button.setAttribute('class', "buttonAnswer" + url.pathname.split('/')[2]);
          element.closest("div").appendChild(button);
       }
-      if (i == 0 && url.host == 'stackoverflow.com'){
+      if (i == 0 && url.host == 'stackoverflow.com' && !isNaN(url.pathname.split('/')[2])){
          showOnLoad = true;
       }
    } catch (error) {}
@@ -80,6 +80,7 @@ if (listId.length){
                      window.requestAnimationFrame(function(time) {
                            $('.StackOverflowAnswer-sidebar').addClass("animation");
                         });
+                     $('.StackOverflowAnswer-sidebarAnswer').scrollTop(0);
                   }
             });
             } else {
