@@ -85,14 +85,14 @@ if (listId.length){
                      }
                   });
                } else {
-                  button[i].innerHTML = 'No Answer';
-                  button[i].style.backgroundColor = '#7f8c8d';
-                  button[i].disabled = true;
+                  buttons[i].innerHTML = 'No Answer';
+                  buttons[i].style.backgroundColor = '#7f8c8d';
+                  buttons[i].disabled = true;
                }
             }
          } 
          // Detect to show/unshow automatically after load
-         if (showOnLoad){
+         if (showOnLoad && document.getElementsByClassName('buttonAnswer' + listId[0])[0].innerHTML != 'No Answer'){
             $('.StackOverflowAnswer-sidebar').css('display', 'block');
             $('.buttonAnswer' + listId[0]).click();
          }

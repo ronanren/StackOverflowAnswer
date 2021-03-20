@@ -13,6 +13,7 @@
 
 - 🌎 Get answer on every StackOverflow instantly
 - ⌛ Fast extension to display the data
+- 🔘 Button on each StackOverflow topic to display the answer
 - 🔗 Available on <a href="">Extension Chrome</a>
 
 <p align="center">
@@ -21,7 +22,7 @@
 
 # License
 
-<a href="https://github.com/ronanren/StackOverflowAnswer/blob/master/LICENSE" target="_blank">MIT</a>
+<a href="https://github.com/ronanren/StackOverflowAnswer/blob/main/LICENSE" target="_blank">MIT</a>
 
 # Contact
 

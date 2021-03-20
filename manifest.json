@@ -1,7 +1,7 @@
 {
-  "name": "Stackoverflow Answer",
-  "description": "Stackoverflow answer sidebar on google search",
-  "version": "1.0",
+  "name": "StackOverflow Answer",
+  "description": "Quick answers of StackOverflow topics on Google",
+  "version": "0.1",
   "manifest_version": 3,
   "content_scripts": [
     {
@@ -25,6 +25,8 @@
   ],
   "permissions": [],
   "icons": {
-    "512": "/images/logo512.png"
+    "16": "images/logo16.png",
+    "48": "images/logo48.png",
+    "128": "images/logo128.png"
   }
 }
