@@ -41,13 +41,13 @@ $('h3, .fl').toArray().forEach((element, i) => {
 // Request Ajax to obtain the best answer of each StackOverflow topics
 if (listId.length){
    $.ajax({
-      url: 'https://api.stackexchange.com/2.2/questions/' + listId.join(';') + '/answers?pagesize=100&order=desc&sort=votes&site=stackoverflow&filter=!b6Aub*uCt1FjWD&key=9hS39Y0q)hDJL2rDsWfA*g((',
+      url: 'https://api.stackexchange.com/2.2/questions/' + listId.join(';') + '/answers?pagesize=100&order=desc&site=stackoverflow&filter=!b6Aub*uCt1FjWD&key=9hS39Y0q)hDJL2rDsWfA*g((',
       type: 'GET',
       success: function(data){
          var answers = {};
          listId.forEach(id => {
             let bestAnswer = "";
-            let score = -20;
+            let score = -8000;
             data.items.some(answer => {
                if (answer.question_id == id && answer.is_accepted == true){
                   bestAnswer = answer;
