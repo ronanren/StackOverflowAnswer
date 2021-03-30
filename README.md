@@ -14,7 +14,7 @@
 - 🌎 Get answer on every StackOverflow instantly
 - ⌛ Fast extension to display the data
 - 🔘 Button on each StackOverflow topic to display the answer
-- 🔗 Available on <a href="">Extension Chrome</a>
+- 🔗 Available on <a href="https://chrome.google.com/webstore/detail/stackoverflow-answer/bmlkdgmiaemiaopodggkhfblhmefimoi?hl=en&authuser=1">Extension Chrome</a>
 
 <p align="center">
     <img src="images/example.gif" width="700px"/>
