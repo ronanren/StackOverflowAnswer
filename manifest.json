@@ -23,7 +23,10 @@
       ]
     }
   ],
-  "permissions": [],
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "options/options.html",
   "icons": {
     "16": "images/logo16.png",
     "48": "images/logo48.png",

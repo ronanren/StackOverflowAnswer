@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>My Test Extension Options</title>
+	<link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+	<div id="options-item">
+		<h1>Options Page</h1>
+		<label>
+			Color Mode :
+			<select id="colorMode">
+				<option value="light">light</option>
+				<option value="dark">dark</option>
+			</select>
+		</label>
+		<label>
+			Stackapps API Key :
+			<input type="text" id="keyAPI">
+			<button id="testAPI">Test Key</button>
+			<label id="labelTestAPI"></label>
+		</label>
+		<button id="save">Save</button>
+		<label id="status"></label>
+	</div>
+
+</body>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="options.js"></script>
+
+</html>
