@@ -77,7 +77,12 @@ if (listId.length) {
                            $('pre').attr('class', 'prettyprint');
                            $('code').attr('class', 'prettyprint');
                            PR.prettyPrint();
-                           $('.StackOverflowAnswer-sidebar')
+                           if (settings.colorMode == 'dark') {
+                              $('.StackOverflowAnswer-sidebarAnswer p').css('color', 'white');
+                              $('.StackOverflowAnswer-sidebarAnswer a').css('color', '#2980b9');
+                              $('.StackOverflowAnswer-sidebarTitle a').css('cssText', 'color: white !important');
+                              $('.StackOverflowAnswer-sidebar').css('background-color', '#212529');
+                           }
                            $('.StackOverflowAnswer-sidebar').removeClass("animation");
                            window.requestAnimationFrame(function (time) {
                               $('.StackOverflowAnswer-sidebar').addClass("animation");

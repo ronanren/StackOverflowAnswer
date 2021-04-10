@@ -3,7 +3,7 @@
 	flex-direction: column; 
 	margin-left: auto;
     margin-right: auto;
-    width: 438px;
+    width: 424px;
 }
 
 label {
@@ -13,17 +13,18 @@ label {
 h1 {
 	margin: 0px 0px 15px 0px;
 	align-self: center;
-	margin-right: 55px;
+	margin-right: 20px;
 }
 
 #status {
 	align-self: center;
 	margin-top: 10px;
-	margin-right: 55px;
+	margin-right: 20px;
+	margin-bottom: 0px;
 }
 
 #save {
 	align-self: center;
 	width: 100px;
-	margin-right: 55px;
+	margin-right: 20px;
 }
