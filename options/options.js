@@ -30,10 +30,10 @@ function test_api_key() {
 		url: 'https://api.stackexchange.com/2.2/info?site=stackoverflow&key=' + document.getElementById('keyAPI').value,
 		type: 'GET',
 		success: function (data) {
-			labelTestAPI.innerHTML = 'key success!';
+			labelTestAPI.innerHTML = 'Key success!';
 		},
 		error: function (data) {
-			labelTestAPI.innerHTML = 'bad key !';
+			labelTestAPI.innerHTML = 'Bad key !';
 		}
 	});
 	setTimeout(function () {
