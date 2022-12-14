@@ -42,7 +42,7 @@ $('h3, .fl').toArray().forEach((element, i) => {
 if (listId.length) {
    chrome.storage.sync.get(['keyApi', 'colorMode'], function (settings) {
       $.ajax({
-         url: 'https://api.stackexchange.com/2.2/questions/' + listId.join(';') + '/answers?pagesize=100&order=desc&site=stackoverflow&filter=!b6Aub*uCt1FjWD' + (settings.keyApi != '' ? "&key=" + settings.keyApi : ""),
+         url: 'https://api.stackexchange.com/2.2/questions/' + listId.join(';') + '/answers?pagesize=100&order=desc&site=stackoverflow&filter=!b6Aub*uCt1FjWD' + (Object.keys(settings).length != 0 ? "&key=" + settings.keyApi : ""),
          type: 'GET',
          success: function (data) {
             var answers = {};
