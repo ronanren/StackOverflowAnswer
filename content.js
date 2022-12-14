@@ -26,7 +26,7 @@ $('h3, .fl').toArray().forEach((element, i) => {
       if (url.host == 'stackoverflow.com' && !isNaN(url.pathname.split('/')[2])) {
          listId.push(url.pathname.split('/')[2]);
          var button = document.createElement("button");
-         button.innerHTML = "Direct Answer";
+         button.innerHTML = "Answer";
          button.setAttribute('url', url);
          button.setAttribute('id', url.pathname.split('/')[2]);
          button.setAttribute('class', "buttonAnswer" + url.pathname.split('/')[2]);
