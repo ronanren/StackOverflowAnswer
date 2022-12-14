@@ -16,7 +16,7 @@
 - ⌛ Fast extension to display the data
 - 🔘 Button on each StackOverflow topic to display the answer
 - 🌓 Switch to dark and light theme
-- 🔑 Put your StackApps api key
+- 🔑 Put your StackApps api key (works without api key, just the limited number of calls)
 - 🔗 Available on <a href="https://chrome.google.com/webstore/detail/stackoverflow-answer/bmlkdgmiaemiaopodggkhfblhmefimoi?hl=en&authuser=1">Chrome Web Store</a>
 
 <p align="center">
