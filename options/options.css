@@ -1,3 +1,7 @@
+body {
+	background-color: #28282d;
+}
+
 #options-item {
 	display: flex; 
 	flex-direction: column; 
@@ -8,12 +12,14 @@
 
 label {
 	margin-bottom: 15px;
+	color: white;
 }
 
 h1 {
 	margin: 0px 0px 15px 0px;
 	align-self: center;
 	margin-right: 40px;
+	color: white;
 }
 
 #keyAPI {
@@ -22,7 +28,7 @@ h1 {
 
 button {
 	background-color: #1a73e8;
-    color: #ffffff;
+    color: #000000;
     padding: 4px 8px;
     margin-left: 4px;
     border: none;
@@ -34,7 +40,7 @@ button {
 #status {
 	position: absolute;
 	margin-left: 260px;
-    margin-top: 127px;
+    margin-top: 162px;
 }
 
 #save {

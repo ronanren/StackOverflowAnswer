@@ -1,8 +1,10 @@
 function save_options() {
 	var colorMode = document.getElementById('colorMode').value;
+	var windowSize = document.getElementById('windowSize').value;
 	var keyApi = document.getElementById('keyAPI').value;
 	chrome.storage.sync.set({
 		colorMode: colorMode,
+		windowSize: windowSize,
 		keyApi: keyApi
 	}, function () {
 		var status = document.getElementById('status');
@@ -14,18 +16,21 @@ function save_options() {
 }
 
 function restore_options() {
+	// chrome.storage.sync.clear();
 	chrome.storage.sync.get({
-		colorMode: 'light',
+		colorMode: 'dark',
+		windowSize: '25vw',
 		keyApi: ''
 	}, function (items) {
 		document.getElementById('colorMode').value = items.colorMode;
+		document.getElementById('windowSize').value = items.windowSize;
 		document.getElementById('keyAPI').value = items.keyApi;
 	});
 }
 
 function test_api_key() {
 	document.getElementById('keyAPI').value;
-	var labelTestAPI = document.getElementById('labelTestAPI');
+	var labelTestAPI = document.getElementById('status');
 	$.ajax({
 		url: 'https://api.stackexchange.com/2.2/info?site=stackoverflow&key=' + document.getElementById('keyAPI').value,
 		type: 'GET',

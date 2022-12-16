@@ -40,7 +40,7 @@ $('h3, .fl').toArray().forEach((element, i) => {
 
 // Request Ajax to obtain the best answer of each StackOverflow topics
 if (listId.length) {
-   chrome.storage.sync.get(['keyApi', 'colorMode'], function (settings) {
+   chrome.storage.sync.get(['keyApi', 'windowSize', 'colorMode'], function (settings) {
       $.ajax({
          url: 'https://api.stackexchange.com/2.2/questions/' + listId.join(';') + '/answers?pagesize=100&order=desc&site=stackoverflow&filter=!b6Aub*uCt1FjWD' + (Object.keys(settings).length != 0 ? "&key=" + settings.keyApi : ""),
          type: 'GET',
@@ -69,6 +69,7 @@ if (listId.length) {
                         // console.log(answers[event.target.getAttribute('id')]);
                         if ($('.StackOverflowAnswer-sidebarTitleMain').attr('href') != event.target.getAttribute('url')) {
                            $('.StackOverflowAnswer-sidebar').css('display', 'block');
+                           $('.StackOverflowAnswer-sidebar').css('width', settings.windowSize);
                            $('.StackOverflowAnswer-sidebarTitleMain').html(answers[event.target.getAttribute('id')].title).text();
                            $('.StackOverflowAnswer-sidebarTitleMain').attr('href', event.target.getAttribute('url'));
                            $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id).html();
