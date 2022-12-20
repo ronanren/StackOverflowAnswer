@@ -74,7 +74,7 @@ if (listId.length) {
                            $('.StackOverflowAnswer-sidebarTitleMain').attr('href', event.target.getAttribute('url'));
                            $('.StackOverflowAnswer-sidebarTitleUrl').text(event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id).html();
                            $('.StackOverflowAnswer-sidebarTitleUrl').attr('href', event.target.getAttribute('url') + '#' + answers[event.target.getAttribute('id')].answer_id);
-                           $('.StackOverflowAnswer-sidebarAnswer').html(answers[event.target.getAttribute('id')].body + '<p>--' + answers[event.target.getAttribute('id')].owner.display_name + '</p>');
+                           $('.StackOverflowAnswer-sidebarAnswer').html(answers[event.target.getAttribute('id')].body + '<p>--<a href="' + answers[event.target.getAttribute('id')].owner.link + '">' + answers[event.target.getAttribute('id')].owner.display_name + '</a></p>');
                            $('pre').attr('class', 'prettyprint');
                            $('code').attr('class', 'prettyprint');
                            PR.prettyPrint();
